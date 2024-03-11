@@ -9,7 +9,7 @@ But I had a development board in my hands with only one button, and I wanted it 
 
 ### Simplest usage
 
-If you just need any old button library, HotButton is just fine for that. Simply do:
+If you just need any old button library, HotButton is just fine for that. Install HotButton with the library manager and then simply do:
 
 ```cpp
 #include <HotButton.h>
