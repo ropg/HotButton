@@ -1,6 +1,12 @@
+/*
+ *  See https://github.com/ropg/HotButton for documentation and for reporting
+ *  any issues.
+*/
+
+
 #define MAX_PRESSES 4
 #define DEBOUNCE_TIME 20
-#define EVENT_TIMEOUT 200
+#define EVENT_TIMEOUT 250
 
 #define BETWEEN(a, b)   ((((a / 10) & 0xFF) << 8) | ((b / 10) & 0xFF))
 #define OVER(a)         ((((a / 10) & 0xFF) << 8) | 0xFF)
@@ -101,6 +107,9 @@ class HotButton {
     bool isTripleClick() {
       return event(TRIPLECLICK);
     }
+    bool isQuadrupleClick() {
+      return event(QUADRUPLECLICK);
+    }
     bool pressedFor(int time) {
       if (curState && millis() - lastChange > time && time > lastPressedFor) {
         lastPressedFor = time;
@@ -111,7 +120,7 @@ class HotButton {
     bool pressed() {
       return pressedFor(1);
     }
-    bool state() {
+    bool pressedNow() {
       pinMode(pin, pullup ? INPUT_PULLUP : INPUT);
       return digitalRead(pin) == active;
     }
