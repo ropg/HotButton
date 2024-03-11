@@ -14,7 +14,7 @@ If you just need any old button library, HotButton is just fine for that. Simply
 ```cpp
 #include <HotButton.h>
 
-HotButton myButton(10)  // 10 = GPIO pin your button is attached to
+HotButton myButton(10);  // 10 = GPIO pin your button is attached to
 
 void setup() {
   Serial.begin(115200);
