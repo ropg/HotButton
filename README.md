@@ -41,6 +41,30 @@ With HotButton you can do more. Any series of up to four keypresses that are not
 
 &nbsp;
 
+#### `#include <HotButton.h>`
+
+Must be at beginning of your program to use HotButton.
+
+&nbsp;
+
+#### `HotButton myButton(<pin>, <pullup>=false, <active>=LOW)`
+
+This is how you set things up. Do this before your `setup()` function. `myButton` here is just whatever name you want to given this particular button. You can have as many as you like. `<pin>` is the number of the GPIO pin your button is attached to and it's the only argument you must provide. Optionally, you can specify that you'd like to use your controller's built-in pull-up resistor on that pin (default is no), and whether the button connects the pin to the power instead of to ground. (Default is to ground, which is most common.) 
+
+&nbsp;
+
+#### All the following functions must be prefixed by the name of your button. 
+
+For example: `myButton.update()`
+
+&nbsp;
+
+#### `.update()`
+
+This must be put in your sketch's `loop()` function for every button you define for HotButton to work.
+
+&nbsp;
+
 #### `.isSingleClick()` `.isDoubleClick()`
 
 #### `.isTripleClick()`, `.isQuadrupleClick()`
