@@ -31,7 +31,7 @@ void loop() {
   if (MyButton.event(DIT, DIT, DA)) Serial.print("U");
   if (MyButton.event(DIT, DIT, DIT, DA)) Serial.print("V");
   if (MyButton.event(DIT, DA, DA)) Serial.print("W");
-  if (MyButton.event(DA, DIT, DIT, DA)) Serial.print("DIT, ");
-  if (MyButton.event(DA, DIT, DA, DA)) Serial.print("DA, ");
+  if (MyButton.event(DA, DIT, DIT, DA)) Serial.print("X");
+  if (MyButton.event(DA, DIT, DA, DA)) Serial.print("Y");
   if (MyButton.event(DA, DA, DIT, DIT)) Serial.print("Z");
 }
