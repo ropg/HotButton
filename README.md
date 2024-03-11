@@ -87,19 +87,19 @@ This is true again and again as long as button is pressed. In other words, it gi
 
 #### `.pressedFor(<ms>)`
 
-is true once as soon as the button is held down for this number of milliseconds. Your `loop()` can have multiple of these, so if you have a number of these tests for different durations, they will each be true once when that duration is reached. 
+Is true once as soon as the button is held down for this number of milliseconds. Your `loop()` can have multiple of these, so if you have a number of these tests for different durations, they will each be true once (and only once) when that duration is reached.
 
 &nbsp;
 
 #### `.waitForPress()`
 
-Your code waits here until the button is pressed, not detecting any other buttons, or doing anything but waiting for the buttonpress. Returns immediately if the button is already pressed.
+Your code waits here until the button is pressed, not detecting any other buttons, or doing anything but waiting for the buttonpress. Returns immediately if the button is already pressed when you call it.
 
 &nbsp;
 
 #### `.waitForRelease()`
 
-Your code waits here until the button to be released, not detecting any other buttons, or doing anything but waiting for the buttonpress. Returns immediately is the button is not pressed.
+Your code waits here until the button to be released, not detecting any other buttons, or doing anything but waiting for the buttonpress. Returns immediately if the button is not pressed when you call it.
 
 &nbsp;
 
