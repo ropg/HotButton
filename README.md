@@ -2,6 +2,7 @@
 
 #### Arduino button library, but with a twist
 
+![](images/button.png)
 
 There's plenty of libraries that handle button presses for Arduinos and everything programmed alike. They all do debouncing (making sure a button press is not counted many times because the button contacts are imperfect) and they all tell you if a button is pressed. Some will even tell you if a button is doubleclicked.
 
@@ -124,4 +125,10 @@ The library provides the folowing shorter notations:
 #define LONG            DA
 ```
 
-So assuming we want to detect the morse letter V, which is &nbsp; · · · ⎯ &nbsp; in morse code. We would simply say `if (myButton.event(DIT, DIT, DIT, DA))`
+So assuming we want to detect the morse letter V, which is &nbsp; · · · ⎯ &nbsp; in morse code. 
+
+```cpp
+if (myButton.event(DIT, DIT, DIT, DA)) {
+  Serial.println("V for Victory !");
+}
+```
